@@ -86,7 +86,7 @@ sub scanmanpage {
         elsif($inex)  {
             $exsize++;
         }
-        if($_ =~ /^\.SH ([\r\n]*)/i) {
+        if($_ =~ /^\.SH ([^\r\n]*)/i) {
             my $n = $1;
             # remove enclosing quotes
             $n =~ s/\"(.*)\"\z/$1/;
